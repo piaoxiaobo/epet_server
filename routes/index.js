@@ -4,10 +4,12 @@ const md5 = require('blueimp-md5')
 const models = require('../db/models')
 const UserModel = models.getModel('user')
 const _filter = {'pwd': 0, '__v': 0} // 查询时过滤掉
-const sms_util = require('../util/sms_util')
+const sms_util = require('../util/sms_util');
 const users = {}
 const axios = require('axios')
+
 var svgCaptcha = require('svg-captcha');
+
 
 /*
 密码登陆
@@ -124,7 +126,7 @@ router.post('/login_sms', function (req, res, next) {
  */
 router.get('/userinfo', function (req, res) {
   // 取出userid
-  const userid = req.session.userid
+  const userid = req.session.userid;
   // 查询
   UserModel.findOne({_id: userid}, _filter, function (err, user) {
     // 如果没有, 返回错误提示
@@ -139,7 +141,6 @@ router.get('/userinfo', function (req, res) {
     }
   })
 })
-
 /*
 获取首页广告列表
  */
@@ -177,6 +178,15 @@ router.get('/carousel', function (req, res) {
     res.send({code: 0, data})
   }, 300)
 });
+/*
+全部品牌
+ */
+router.get('/allbrand', function (req, res) {
+    const data = require('../data/allbrand.json');
+    res.send({code: 0, data})
+
+});
 
 
 module.exports = router;
+
