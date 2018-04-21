@@ -247,6 +247,7 @@ GitHub地址：https://github.com/piaoxiaobo/epet_server<br>
 	|参数		|是否必选 |类型     |说明
 	|phone       |Y       |string   |手机号
 	|code        |Y       |string   |验证码
+	|captcha     |Y       |string   |图形验证码
 
 ### 返回示例：
     * 登陆成功
