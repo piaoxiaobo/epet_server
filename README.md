@@ -3,7 +3,6 @@
 网站：[小泊随記](https://www.itsolotime.com)<br>
 博客：[漂小泊的博客](https://www.itsolotime.com/blog)<br>
 GitHub地址：https://github.com/piaoxiaobo/epet_server<br>
-感谢[zxfjd3g](https://github.com/zxfjd3g)的技术支持。
 ## 目录：
 [1、获取E宠主页广告列表](##获取E宠主页广告列表)<br/>
 [2、获取E宠分类列表](#获取E宠分类列表)<br/>
